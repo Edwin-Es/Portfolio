@@ -29,7 +29,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: #14303f;
-    background-image: url(./images/fondo.png);
+    background-image: url(images/fondo.png);
     background-size: 2%;
     font-family: 'Averia Sans Libre', cursive;
     overflow-x: hidden;
