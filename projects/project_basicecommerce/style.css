@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+
+body{
+    margin-top:0;
+    padding-top: 0;
+    font-family: 'Laila', sans-serif;
+    position: relative;
+}
+
+nav>ul{
+    list-style: none;
+    display: inline;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+    margin:0;
+    padding: 0.5rem
+}
+header{
+    margin-top:0;
+    padding:0;
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+}
+nav{
+    position: relative;
+    display: grid;
+    justify-content: end;
+    align-items: center;
+    padding-right: 5rem;
+    border-bottom: 1px solid #000;
+    height: 5rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.cart{
+    position: relative;
+    z-index: 2;
+}
+#cart1{
+    cursor: pointer;
+    text-indent: 25%;
+    width: 1.3rem;
+    height: 1.3rem;
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background-color: red;
+    color: #e9e6e6;
+    border-radius: 50%;
+    top: -5px;
+    right: -12px;
+    user-select: none; 
+}
+nav>img{
+    position: absolute;
+    margin:0 0 0 3rem;
+    top: -30px;
+    left:0;
+    height:8rem;
+    z-index: -1;
+}
+nav>ul>li{
+    padding: 0.5rem 1rem ;
+    border-radius: 5px;
+    margin:0;
+}
+nav>ul>li:hover{
+    background-color: #dfdddd;
+    cursor: pointer;
+    
+}
+
+h1{
+    padding: 5rem 0 0 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.container{
+    display: flex;
+    padding: 3rem 5rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.producto{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin: 0 0 5rem 0;
+    z-index: 1;
+}
+
+.producto>img{
+    width: 10rem;
+    height: 12rem;
+    align-self: center;
+}
+
+.producto>img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    filter: drop-shadow(8px 6px 4px #8f2c3191);
+    top: 3rem;
+    
+}
+
+
+.precio>p{
+    display: inline;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.precio{
+    margin-top: 1rem;
+    align-self: center;
+}
+
+.producto>p{
+    padding: 0.5rem 1rem 0 1rem;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+    color: #222222;
+}
+
+.producto>.radio{
+    align-self: center;
+    padding: 0.5rem;
+    font-weight: 400;
+}
+
+.producto>button{
+    width: 60%;
+    align-self: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    background-color: rgb(143, 44, 49);
+    color:#fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+}
+.producto>button:hover{
+    background-color: rgb(175, 43, 50);
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#carrito{
+    border: 0.5px solid #b1aeae;
+    background-color: #fff;
+    position: fixed;
+    top: 4rem;
+    right: 13rem;
+    z-index: 11;
+    height: auto;
+    max-height: 19rem;
+    width: 22rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition-duration: 50ms;
+    transition-property: visibility;
+}
+
+.producto2{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    overflow: hidden;
+    justify-content: space-between;
+    align-content: flex-end;
+    border-bottom: 1px solid #b1aeae;
+}
+.producto2>img{
+    width: 3.5rem;
+    height: 4rem;
+    align-self: center;
+}
+
+.producto2>.precio>p{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.producto2>.precio{
+    padding: 0;
+    margin:0;
+}
+
+.producto2>button {
+    cursor: pointer;
+    background-color: transparent;
+    color: rgb(228, 6, 17);
+    padding: 0.5rem 0.5rem;
+    font-size: 2rem;
+    height: min-content;
+    border: none;
+    margin: 0;
+    align-self: center;
+}
+
+.visible{
+    visibility: visible;
+    transition: visibility 1s;
+}
+.no-visible{
+    visibility: hidden;
+
+}
+
+#total{
+    position: relative;
+    font-weight: 800;
+    font-size: 1rem;
+    padding-right: 1rem;
+    text-align: end;
+    
+}
+
+#total::before{
+    content: "";
+    position: absolute;
+    border-top: 3px solid rgb(143, 44, 49);
+    top:-5px;
+    right: 15px;
+    width: 10rem;
+
+}
