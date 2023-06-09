@@ -101,6 +101,7 @@ function skillsstart(){
         "images/salesforce.png",
         "images/git.png"
     ]
+    
     $(".skill div").each(function(index){
         $(this).css("background-image",`url(${skilllogo[index]})`)
         $(this).addClass("inactive")
