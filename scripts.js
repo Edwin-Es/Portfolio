@@ -92,14 +92,14 @@ skillsstart()
 
 function skillsstart(){
     let skilllogo=[
-        "images/htmlcss.png",
-        "images/javascript.png",
-        "images/jquery.png",
-        "images/reactjs.png",
-        "images/sql.png",
-        "images/java.png",
-        "images/salesforce.png",
-        "images/git.png"
+        "./images/htmlcss.png",
+        "./images/javascript.png",
+        "./images/jquery.png",
+        "./images/reactjs.png",
+        "./images/sql.png",
+        "./images/java.png",
+        "./images/salesforce.png",
+        "./images/git.png"
     ]
     $(".skill div").each(function(index){
         $(this).css("background-image",`url(${skilllogo[index]})`)
