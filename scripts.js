@@ -92,14 +92,14 @@ skillsstart()
 
 function skillsstart(){
     let skilllogo=[
-        "/images/htmlcss.png",
-        "/images/javascript.png",
-        "/images/jquery.png",
-        "/images/reactjs.png",
-        "/images/sql.png",
-        "/images/java.png",
-        "/images/salesforce.png",
-        "/images/git.png"
+        "images/htmlcss.png",
+        "images/javascript.png",
+        "images/jquery.png",
+        "images/reactjs.png",
+        "images/sql.png",
+        "images/java.png",
+        "images/salesforce.png",
+        "images/git.png"
     ]
     $(".skill div").each(function(index){
         $(this).css("background-image",`url(${skilllogo[index]})`)
@@ -228,7 +228,7 @@ function projectsfill(){
     let websites2=["digital clock","image carussel","content placeholder","animated countdown","article transform","blur loader","drag item effect","FAQ example","login form example","progress steps","image slider","blog example","text effect","basic counter"]
 
     websites.forEach(element=>{
-        let div=`<div class="link"><span><p>${element}</p><button><a href="#">Live Demo</a></button></span></div>`
+        let div=`<div class="link"><span><p>${element}</p><button><a href="projects/project_${element.replace(/\s/g, '')}" target="_blank">Live Demo</a></button></span></div>`
         $(".websites").append(div)
     })
 
@@ -236,7 +236,7 @@ function projectsfill(){
         $(this).css("background-image",`url("images/projects_img/${websites[index].replace(/\s/g, '')}.png")`)
     })
     websites2.forEach(element=>{
-        let div=`<div class="link"><span><p>${element}</p><button><a href="#">Live Demo</a></button></span></div>`
+        let div=`<div class="link"><span><p>${element}</p><button><a href="projects/project_${element.replace(/\s/g, '')}" target="_blank">Live Demo</a></button></span></div>`
         $(".websites2").append(div)
     })
     $(".websites2 div").each(function (index){
