@@ -89,27 +89,6 @@ function redirect(){
 counter=1;
 aboutme()
 function aboutme(){
-    $("#more").on("click",()=>{
-        if(counter<3){
-            $("#reset").css("opacity","0.5")
-            $(".about-text").css("transform",`translateX(${-counter*1000}px)`)
-            counter++;
-        }
-        if(counter==2)$(".progress").css("padding-left","33%")
-        if(counter==3)$(".progress").css("padding-left","66%")
-        if(counter==3){
-            $("#more").css("opacity","0.5")
-            $("#reset").css("opacity","1")
-        }
-        })
-    $("#reset").on("click",()=>{
-        $("#more").css("opacity","1")
-        $("#reset").css("opacity","0.5")
-        $(".about-text").css("transform",`translateX(0px)`)
-        $(".progress").css("padding-left","0px")
-        counter=1;
-    })
-
     if($(window).width()<480){
         $(".about").css("width",`${$(window).width()}px`)
         $(".about-text div").each(function(){
@@ -136,6 +115,29 @@ function aboutme(){
             counter=1;
         })
     }
+    else{
+    $("#more").on("click",()=>{
+        if(counter<3){
+            $("#reset").css("opacity","0.5")
+            $(".about-text").css("transform",`translateX(${-counter*1000}px)`)
+            counter++;
+        }
+        if(counter==2)$(".progress").css("padding-left","33%")
+        if(counter==3)$(".progress").css("padding-left","66%")
+        if(counter==3){
+            $("#more").css("opacity","0.5")
+            $("#reset").css("opacity","1")
+        }
+        })
+    $("#reset").on("click",()=>{
+        $("#more").css("opacity","1")
+        $("#reset").css("opacity","0.5")
+        $(".about-text").css("transform",`translateX(0px)`)
+        $(".progress").css("padding-left","0px")
+        counter=1;
+    })
+    }
+    
     
 }
 
@@ -377,28 +379,6 @@ function projectsanimation(){
 
 contactme()
 function contactme(){
-    $(".form").on("mouseover",()=>{
-        $(".form").css("width","75%")
-        $(".faq").css("width","25%")
-    })
-
-    $(".faq").on("mouseover",()=>{
-        $(".faq").css("width","75%")
-        $(".form").css("width","25%")
-    })
-
-    $(".form").on("mouseout",()=>{
-        $(".form").css("width","50%")
-        $(".faq").css("width","50%")
-    })
-    
-    $(".faq").on("mouseout",()=>{
-        $(".faq").css("width","50%")
-        $(".form").css("width","50%")
-    })
-    formvalidation()
-    faqselection()
-
     if($(window).width()<480){
         $(".form").on("mouseover",()=>{
             $(".form").css("height","75%")
@@ -422,8 +402,28 @@ function contactme(){
         formvalidation()
         faqselection()
     }
+    else{
+    $(".form").on("mouseover",()=>{
+        $(".form").css("width","75%")
+        $(".faq").css("width","25%")
+    })
+
+    $(".faq").on("mouseover",()=>{
+        $(".faq").css("width","75%")
+        $(".form").css("width","25%")
+    })
+
+    $(".form").on("mouseout",()=>{
+        $(".form").css("width","50%")
+        $(".faq").css("width","50%")
+    })
     
-   
+    $(".faq").on("mouseout",()=>{
+        $(".faq").css("width","50%")
+        $(".form").css("width","50%")
+    })
+    formvalidation()
+    faqselection()  }
 }
 function formvalidation(){
     $("#name").on("input",function(){
