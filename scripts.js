@@ -53,6 +53,15 @@ function scroll(){
 //all section animation
 animation()
 function animation(){
+    window.addEventListener("scroll",()=>{
+        let coord=$(".about").offset()
+        if(window.scrollY>coord.top/2) {
+            
+        }
+        else if(window.scrollY<coord.top/2){
+
+        }
+      })
 }
 //details buttons
 redirect()
@@ -60,6 +69,21 @@ function redirect(){
     $(".github").on("click",()=>window.open("https://github.com/Edwin-Es",'_blank'))
     $(".whatsapp").on("click",()=>window.open("https://api.whatsapp.com/send?phone=50361136612",'_blank'))
     $(".linkedin").on("click",()=>window.open("https://www.linkedin.com/in/edwin-estrada-2a7b42264","_blank"))
+    console.log($(".menu").width())
+
+    if($(window).width<480){ 
+    let rotate=false;
+    $(".innermenu").on("click",()=>{
+        $(".menu").slideToggle(200);
+        if(!rotate){
+            $(".innermenu svg").css("transform","rotate(90deg)")
+            rotate=true;
+        }
+        else {
+            $(".innermenu svg").css("transform","rotate(0)")
+            rotate=false;
+        }
+        })}
 }
 //about me section
 counter=1;
@@ -85,6 +109,31 @@ function aboutme(){
         $(".progress").css("padding-left","0px")
         counter=1;
     })
+
+    if($(window).width()<480){
+        $(".about").css("width",`${$(window).width()}`)
+        $(".about-text div").css("width",`${$(window).width()}`)
+        $("#more").on("click",()=>{
+            if(counter<3){
+                $("#reset").css("opacity","0.5")
+                $(".about-text").css("transform",`translateX(${-counter*$(window).width()}px)`)
+                counter++;
+            }
+            if(counter==2)$(".progress").css("padding-left","33%")
+            if(counter==3)$(".progress").css("padding-left","66%")
+            if(counter==3){
+                $("#more").css("opacity","0.5")
+                $("#reset").css("opacity","1")
+            }
+            })
+        $("#reset").on("click",()=>{
+            $("#more").css("opacity","1")
+            $("#reset").css("opacity","0.5")
+            $(".about-text").css("transform",`translateX(0px)`)
+            $(".progress").css("padding-left","0px")
+            counter=1;
+        })
+    }
     
 }
 

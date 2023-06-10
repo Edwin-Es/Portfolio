@@ -119,6 +119,7 @@ h2{
     border-radius: 50% 50% 0 0;
     position: absolute;
     left: 100px;
+    animation: showing-r 500ms ease;
 }
 .personal-image img{
     width: 100%;
@@ -140,6 +141,7 @@ h2{
     height: 60%;
     box-sizing: border-box;
     border-radius: 15px;
+    animation: showing-l 500ms ease;
     
 }
 
@@ -198,7 +200,7 @@ h2{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    
+    animation: showing-u 500ms ease;
 }
 .menu ul{
     display: flex;
@@ -229,6 +231,9 @@ h2{
 }
 .menu li:hover{
     text-shadow: 0 0 20px var(--sec-color);
+}
+.innermenu{
+    display: none;
 }
 .about{
     width: 1000px;
