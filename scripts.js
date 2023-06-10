@@ -71,7 +71,7 @@ function redirect(){
     $(".linkedin").on("click",()=>window.open("https://www.linkedin.com/in/edwin-estrada-2a7b42264","_blank"))
     console.log($(".menu").width())
 
-    if($(window).width<480){ 
+    if($(window).width()<480){ 
     let rotate=false;
     $(".innermenu").on("click",()=>{
         $(".menu").slideToggle(200);
@@ -111,8 +111,8 @@ function aboutme(){
     })
 
     if($(window).width()<480){
-        $(".about").css("width",`${$(window).width()}`)
-        $(".about-text div").css("width",`${$(window).width()}`)
+        $(".about").css("width",`${$(window).width()}px`)
+        $(".about-text div").css("width",`${$(window).width()}px`)
         $("#more").on("click",()=>{
             if(counter<3){
                 $("#reset").css("opacity","0.5")

@@ -51,6 +51,7 @@
     }
     .innermenu{
         align-self: flex-end;
+        margin-top: 15px;
         margin-right: 25px;
         cursor: pointer;
         z-index: 4;
@@ -67,6 +68,31 @@
         width:40px;
         height: 40px;
         transition: all 500ms ease;
+    }
+    .about{
+        margin-top: 1rem;
+        padding:1rem;
+        font-size: 1.3rem;
+    }
+    .skillshow{
+        flex-direction: column;
+    }
+    .skill{
+        flex-direction: row;
+        width: 100%;
+    }
+    .show{
+        width: 100%;
+        height: 60%;
+        margin:1rem 0;
+        padding: 1rem 2rem;
+        font-size: 1rem ;
+    }
+    .show p:nth-of-type(odd){
+        padding: 0 2rem 0 0;
+    }
+    .show p:nth-of-type(even){
+        padding: 0 0 0 2rem;
     }
 
 }
