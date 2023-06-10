@@ -77,6 +77,9 @@
     .about h2{
         margin-top: 1.5rem;
     }
+    .skills h2{
+        font-size: 2rem;
+    }
     .skillshow{
         flex-direction: column;
     }
@@ -107,11 +110,13 @@
     }
     .split{
         flex-direction: column;
+        height: 100vh;
     }
     .form,.faq{
         width: 100%;
         height: 50%;
         box-sizing: border-box;
+        overflow-y: hidden;
     }
     .form>p,.faq>p{
         margin:0;
@@ -119,6 +124,44 @@
     }
     .forminfo form{
         gap:0.5rem;
+    }
+
+    .question1,.question2,.question3,.question4{
+        width: 100%;
+        font-size: 1rem;
+    }
+    .question p{
+        display: block;
+        width: 90%;
+    }
+    .question svg{
+        display: block;
+        width: 10%;
+        height: 30px;
+        transition: all 500ms ease;
+    }
+    .question{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        color: var(--sec-color);
+        background-color: #14303f70;
+    }
+    .answer{
+        display: none;
+        width: 100%;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        background-color: #14303f70;
+        color: var(--sec-color);
+        border-radius: 0 0 10px 10px;
+        border-top: 1px dotted#008cae;
+    }
+    .answer p{
+        margin:0;
     }
 
 }

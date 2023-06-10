@@ -380,24 +380,31 @@ function projectsanimation(){
 contactme()
 function contactme(){
     if($(window).width()<480){
+        $(".forminfo").hide()
+        $(".faq #qshow").each(function(){
+            $(this).hide()
+        })
         $(".form").on("mouseover",()=>{
             $(".form").css("height","75%")
             $(".faq").css("height","25%")
+            $("#titlefaq").fadeIn()
+            $(".forminfo").fadeIn()
+            $(".faq #qshow").each(function(){
+                $(this).fadeOut()
+                
+            })
         })
     
         $(".faq").on("mouseover",()=>{
             $(".faq").css("height","75%")
             $(".form").css("height","25%")
-        })
-    
-        $(".form").on("mouseout",()=>{
-            $(".form").css("height","50%")
-            $(".faq").css("height","50%")
-        })
-        
-        $(".faq").on("mouseout",()=>{
-            $(".faq").css("height","50%")
-            $(".form").css("height","50%")
+            $("#titleform").fadeIn()
+            $(".forminfo").fadeIn()
+            $(".faq #qshow").each(function(){
+                $(this).fadeIn()
+                
+            })
+            $(".forminfo").fadeOut()
         })
         formvalidation()
         faqselection()
