@@ -112,7 +112,9 @@ function aboutme(){
 
     if($(window).width()<480){
         $(".about").css("width",`${$(window).width()}px`)
-        $(".about-text div").css("width",`${$(window).width()}px`)
+        $(".about-text div").each(function(){
+            $(this).css("width",`${$(window).width()}px`)
+        })
         $("#more").on("click",()=>{
             if(counter<3){
                 $("#reset").css("opacity","0.5")
@@ -396,6 +398,30 @@ function contactme(){
     })
     formvalidation()
     faqselection()
+
+    if($(window).width()<480){
+        $(".form").on("mouseover",()=>{
+            $(".form").css("height","75%")
+            $(".faq").css("height","25%")
+        })
+    
+        $(".faq").on("mouseover",()=>{
+            $(".faq").css("height","75%")
+            $(".form").css("height","25%")
+        })
+    
+        $(".form").on("mouseout",()=>{
+            $(".form").css("height","50%")
+            $(".faq").css("height","50%")
+        })
+        
+        $(".faq").on("mouseout",()=>{
+            $(".faq").css("height","50%")
+            $(".form").css("height","50%")
+        })
+        formvalidation()
+        faqselection()
+    }
     
    
 }

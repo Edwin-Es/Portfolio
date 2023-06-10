@@ -74,6 +74,9 @@
         padding:1rem;
         font-size: 1.3rem;
     }
+    .about h2{
+        margin-top: 1.5rem;
+    }
     .skillshow{
         flex-direction: column;
     }
@@ -81,9 +84,13 @@
         flex-direction: row;
         width: 100%;
     }
+    .skill div{
+        width: 80px;
+        height: 80px;
+    }
     .show{
         width: 100%;
-        height: 60%;
+        height: 70%;
         margin:1rem 0;
         padding: 1rem 2rem;
         font-size: 1rem ;
@@ -93,6 +100,25 @@
     }
     .show p:nth-of-type(even){
         padding: 0 0 0 2rem;
+    }
+
+    .active:after{
+        display: none;
+    }
+    .split{
+        flex-direction: column;
+    }
+    .form,.faq{
+        width: 100%;
+        height: 50%;
+        box-sizing: border-box;
+    }
+    .form>p,.faq>p{
+        margin:0;
+        font-size: 1rem;
+    }
+    .forminfo form{
+        gap:0.5rem;
     }
 
 }
