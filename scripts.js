@@ -69,7 +69,6 @@ function redirect(){
     $(".github").on("click",()=>window.open("https://github.com/Edwin-Es",'_blank'))
     $(".whatsapp").on("click",()=>window.open("https://api.whatsapp.com/send?phone=50361136612",'_blank'))
     $(".linkedin").on("click",()=>window.open("https://www.linkedin.com/in/edwin-estrada-2a7b42264","_blank"))
-    console.log($(".menu").width())
 
     if($(window).width()<480){ 
     let rotate=false;
@@ -83,7 +82,11 @@ function redirect(){
             $(".innermenu svg").css("transform","rotate(0)")
             rotate=false;
         }
-        })}
+        })
+        $(".github").on("click",()=>$(".menu").slideToggle(200))
+        $(".whatsapp").on("click",()=>$(".menu").slideToggle(200))
+        $(".linkedin").on("click",()=>$(".menu").slideToggle(200))
+    }
 }
 //about me section
 counter=1;
