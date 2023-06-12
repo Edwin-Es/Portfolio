@@ -164,4 +164,23 @@
         margin:0;
     }
 
+    .rightCarrusel, .leftCarrusel{
+        width: 100%;
+        height: 150px;
+    }
+    .rightCarrusel button, .leftCarrusel button{
+        width: 10%;
+        padding: 0;
+        margin: 0;
+    }
+    .rightCarrusel button svg, .leftCarrusel button svg{
+        width: 30px;
+        height: 30px;
+    }
+    .link{
+        width: 150px;
+    }
+    .websitecontainer{
+        width: 300px;
+    }
 }

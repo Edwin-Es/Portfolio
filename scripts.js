@@ -301,80 +301,11 @@ function projectsfill(){
 projectsanimation()
 
 function projectsanimation(){
-    let increment=0;
-    let increment2=0
-    let width=$(".websites div").length*200-1000;
-    let width2=$(".websites2 div").length*200-1000;
-
-    $(".websites2").css("transform",`translateX(-${width2}px)`)
-
-    let interval = setInterval(run, 1500)
-    let interval2 = setInterval(run2, 1500)
-
-    function run() {
-        if(increment*200>width){
-            $(".websites").css("transform",`translateX(0px)`)
-            increment=1;
-        }
-        else {
-            $(".websites").css("transform",`translateX(${-increment*200}px)`)
-            increment++;  
-        }
+    if($(window).width()<480){projectanimationwidth480()}
+    else{
+        projectanimationstandard()
     }
-    function run2(){
-        if(increment2*200>width2){
-            $(".websites2").css("transform",`translateX(-${width2}px)`)
-            increment2=1;
-        }
-        else {
-            $(".websites2").css("transform",`translateX(${-(width2-(increment2*200))}px)`)
-           
-            increment2++;  
-        }
-    }
-
-    $(".rightCarrusel").on("mouseenter",()=>{
-        clearInterval(interval)
-        clearInterval(interval2)
-    })
-    $(".rightCarrusel").on("mouseleave",()=>{
-        interval = setInterval(run, 1500)
-        interval2 = setInterval(run2, 1500)
-    })
-    $(".leftCarrusel").on("mouseenter",()=>{
-        clearInterval(interval)
-        clearInterval(interval2)
-    })
-    $(".leftCarrusel").on("mouseleave",()=>{
-        interval = setInterval(run, 1500)
-        interval2 = setInterval(run2, 1500)
-    })
-    $("#next1").on("click",()=>{
-        run()
-    })
-    $("#prev2").on("click",()=>{
-        run2()
-    })
-    $("#prev1").on("click",()=>{
-        if(increment*200>width){
-            $(".websites").css("transform",`translateX(-${width}px)`)
-            increment=1;
-        }
-        else {
-            $(".websites").css("transform",`translateX(${-(width-((increment)*200))}px)`)
-            increment++;  
-        }
-    })
-    $("#next2").on("click",()=>{
-        if(increment2*200>width2){
-            $(".websites2").css("transform",`translateX(0px)`)
-            increment2=1;
-        }
-        else {
-            $(".websites2").css("transform",`translateX(${-increment2*200}px)`)
-            increment2++;  
-        }
-    })
+    
 }
 
 contactme()
@@ -478,5 +409,159 @@ function faqselection(){
         if(q4){$(".question4 svg").css("transform","rotate(180deg)");q4=false}
         else {$(".question4 svg").css("transform","rotate(0deg)");q4=true}
         $(".question4 .answer").slideToggle()
+    })
+}
+
+///project animation width <480
+function projectanimationwidth480(){
+    let increment=0;
+    let increment2=0
+    let width=$(".websites div").length*150-300;
+    let width2=$(".websites2 div").length*150-300;
+
+    $(".websites2").css("transform",`translateX(-${width2}px)`)
+
+    let interval = setInterval(run, 1500)
+    let interval2 = setInterval(run2, 1500)
+
+    function run() {
+        if(increment*150>width){
+            $(".websites").css("transform",`translateX(0px)`)
+            increment=1;
+        }
+        else {
+            $(".websites").css("transform",`translateX(${-increment*150}px)`)
+            increment++;  
+        }
+    }
+    function run2(){
+        if(increment2*150>width2){
+            $(".websites2").css("transform",`translateX(-${width2}px)`)
+            increment2=1;
+        }
+        else {
+            $(".websites2").css("transform",`translateX(${-(width2-(increment2*150))}px)`)
+           
+            increment2++;  
+        }
+    }
+
+    $(".rightCarrusel").on("mouseenter",()=>{
+        clearInterval(interval)
+        clearInterval(interval2)
+    })
+    $(".rightCarrusel").on("mouseleave",()=>{
+        interval = setInterval(run, 1500)
+        interval2 = setInterval(run2, 1500)
+    })
+    $(".leftCarrusel").on("mouseenter",()=>{
+        clearInterval(interval)
+        clearInterval(interval2)
+    })
+    $(".leftCarrusel").on("mouseleave",()=>{
+        interval = setInterval(run, 1500)
+        interval2 = setInterval(run2, 1500)
+    })
+    $("#next1").on("click",()=>{
+        run()
+    })
+    $("#prev2").on("click",()=>{
+        run2()
+    })
+    $("#prev1").on("click",()=>{
+        if(increment*150>width){
+            $(".websites").css("transform",`translateX(-${width}px)`)
+            increment=1;
+        }
+        else {
+            $(".websites").css("transform",`translateX(${-(width-((increment)*150))}px)`)
+            increment++;  
+        }
+    })
+    $("#next2").on("click",()=>{
+        if(increment2*150>width2){
+            $(".websites2").css("transform",`translateX(0px)`)
+            increment2=1;
+        }
+        else {
+            $(".websites2").css("transform",`translateX(${-increment2*150}px)`)
+            increment2++;  
+        }
+    })
+}
+function projectanimationstandard(){
+    let increment=0;
+    let increment2=0
+    let width=$(".websites div").length*200-1000;
+    let width2=$(".websites2 div").length*200-1000;
+
+    $(".websites2").css("transform",`translateX(-${width2}px)`)
+
+    let interval = setInterval(run, 1500)
+    let interval2 = setInterval(run2, 1500)
+
+    function run() {
+        if(increment*200>width){
+            $(".websites").css("transform",`translateX(0px)`)
+            increment=1;
+        }
+        else {
+            $(".websites").css("transform",`translateX(${-increment*200}px)`)
+            increment++;  
+        }
+    }
+    function run2(){
+        if(increment2*200>width2){
+            $(".websites2").css("transform",`translateX(-${width2}px)`)
+            increment2=1;
+        }
+        else {
+            $(".websites2").css("transform",`translateX(${-(width2-(increment2*200))}px)`)
+           
+            increment2++;  
+        }
+    }
+
+    $(".rightCarrusel").on("mouseenter",()=>{
+        clearInterval(interval)
+        clearInterval(interval2)
+    })
+    $(".rightCarrusel").on("mouseleave",()=>{
+        interval = setInterval(run, 1500)
+        interval2 = setInterval(run2, 1500)
+    })
+    $(".leftCarrusel").on("mouseenter",()=>{
+        clearInterval(interval)
+        clearInterval(interval2)
+    })
+    $(".leftCarrusel").on("mouseleave",()=>{
+        interval = setInterval(run, 1500)
+        interval2 = setInterval(run2, 1500)
+    })
+    $("#next1").on("click",()=>{
+        run()
+    })
+    $("#prev2").on("click",()=>{
+        run2()
+    })
+    $("#prev1").on("click",()=>{
+        if(increment*200>width){
+            $(".websites").css("transform",`translateX(-${width}px)`)
+            increment=1;
+        }
+        else {
+            $(".websites").css("transform",`translateX(${-(width-((increment)*200))}px)`)
+            increment++;  
+        }
+    })
+    $("#next2").on("click",()=>{
+        if(increment2*200>width2){
+            $(".websites2").css("transform",`translateX(0px)`)
+            increment2=1;
+        }
+        else {
+            $(".websites2").css("transform",`translateX(${-increment2*200}px)`)
+            increment2++;  
+        }
     })
 }
