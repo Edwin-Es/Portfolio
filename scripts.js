@@ -83,9 +83,9 @@ function redirect(){
             rotate=false;
         }
         })
-        $(".github").on("click",()=>$(".menu").slideToggle(200))
-        $(".whatsapp").on("click",()=>$(".menu").slideToggle(200))
-        $(".linkedin").on("click",()=>$(".menu").slideToggle(200))
+        $(".github").on("click",()=>$(".menu").slideUp(200))
+        $(".whatsapp").on("click",()=>$(".menu").slideUp(200))
+        $(".linkedin").on("click",()=>$(".menu").slideUp(200))
     }
 }
 //about me section
