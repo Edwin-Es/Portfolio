@@ -70,7 +70,7 @@ function redirect(){
     $(".whatsapp").on("click",()=>window.open("https://api.whatsapp.com/send?phone=50361136612",'_blank'))
     $(".linkedin").on("click",()=>window.open("https://www.linkedin.com/in/edwin-estrada-2a7b42264","_blank"))
 
-    if($(window).width()<480){ 
+    if($(window).width()<980){ 
     let rotate=false;
     $(".innermenu").on("click",()=>{
         $(".menu").slideToggle(200);
@@ -83,16 +83,13 @@ function redirect(){
             rotate=false;
         }
         })
-        $(".github").on("click",()=>$(".menu").fadeOut(200))
-        $(".whatsapp").on("click",()=>$(".menu").fadeOut(200))
-        $(".linkedin").on("click",()=>$(".menu").fadeOut(200))
+        $(".menu ul").on("click",()=>$(".menu").fadeOut(200))
     }
 }
 //about me section
 counter=1;
 aboutme()
 function aboutme(){
-    if($(window).width()<480){
         $(".about").css("width",`${$(window).width()}px`)
         $(".about-text div").each(function(){
             $(this).css("width",`${$(window).width()}px`)
@@ -118,31 +115,6 @@ function aboutme(){
             counter=1;
         })
     }
-    else{
-    $("#more").on("click",()=>{
-        if(counter<3){
-            $("#reset").css("opacity","0.5")
-            $(".about-text").css("transform",`translateX(${-counter*1000}px)`)
-            counter++;
-        }
-        if(counter==2)$(".progress").css("padding-left","33%")
-        if(counter==3)$(".progress").css("padding-left","66%")
-        if(counter==3){
-            $("#more").css("opacity","0.5")
-            $("#reset").css("opacity","1")
-        }
-        })
-    $("#reset").on("click",()=>{
-        $("#more").css("opacity","1")
-        $("#reset").css("opacity","0.5")
-        $(".about-text").css("transform",`translateX(0px)`)
-        $(".progress").css("padding-left","0px")
-        counter=1;
-    })
-    }
-    
-    
-}
 
 skillsstart()
 
@@ -313,7 +285,7 @@ function projectsanimation(){
 
 contactme()
 function contactme(){
-    if($(window).width()<480){
+    if($(window).width()<980){
         $(".forminfo").hide()
         $(".faq #qshow").each(function(){
             $(this).hide()

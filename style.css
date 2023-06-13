@@ -43,7 +43,6 @@ h2{
     text-decoration:overline;
     font-size: 3rem;
     text-transform: uppercase;
-    margin-top: 6rem;
     margin-bottom: 0;
 }
 #top{
@@ -238,10 +237,10 @@ h2{
 .about{
     width: 1000px;
     height: 100vh;
-    margin-top: 4rem;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     border-bottom: 5px dotted var(--third-color); 
 }
 .about-text{
@@ -259,7 +258,7 @@ h2{
     width: 1000px;
     border-radius: 15px 15px 0 0;
     box-sizing: border-box;
-    padding: 3rem;
+    padding: 3rem 6rem;
     font-size: 1.6rem;
     color: var(--sec-color);
 }
@@ -305,6 +304,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #1a3b4d23;
 }
 
